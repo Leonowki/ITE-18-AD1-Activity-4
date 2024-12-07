@@ -18,6 +18,7 @@ scene.add(camera);
 // === Controls ===
 new OrbitControls(camera, renderer.domElement);
 
+
 // === Lighting ===
 const dynamicLight = new THREE.PointLight(0xffffff, 2, 50);
 dynamicLight.position.set(0, 10, 0);
@@ -26,6 +27,14 @@ scene.add(dynamicLight);
 const dynamicLight2 = new THREE.PointLight(0xffffff, 2, 50);
 dynamicLight.position.set(50, 10, 0);
 scene.add(dynamicLight2);
+
+const dynamicLight3 = new THREE.PointLight(0xffffff, 2, 100);
+dynamicLight3.position.set(-10, 10, -10);
+scene.add(dynamicLight3);
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
 
 // === Ocean ===
 const ocean = (() => {
